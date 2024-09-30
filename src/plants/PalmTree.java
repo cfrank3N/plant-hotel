@@ -1,6 +1,9 @@
+package plants;
+
+import enums.Liquid;
 import javax.swing.*;
 
-public class PalmTree extends Plant{
+public class PalmTree extends Plant {
 
     public PalmTree(String name, double heightInMeters) {
         super(name, heightInMeters);

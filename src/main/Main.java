@@ -1,3 +1,11 @@
+package main;
+
+import hotels.Hotel;
+import plants.Cactus;
+import plants.Carnivorous;
+import plants.PalmTree;
+import plants.Plant;
+
 import javax.swing.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -38,7 +46,7 @@ public class Main {
                 //Om den hittar växtens namn printar den ut en instruktion om hur man ska vattna den.
                 //Här används polymorphism då listan är av typen planta, men beroende på vilken växt det är
                 //skriver den ut en unik instruktion specifikt för den växten
-                if (input.equals(p.name)) {
+                if (input.equals(p.getName())) {
                     p.printInstructions();
                     return;
                 }

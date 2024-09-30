@@ -1,3 +1,6 @@
+package plants;
+
+import enums.Liquid;
 import javax.swing.*;
 
 public class Cactus extends Plant {

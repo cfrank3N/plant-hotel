@@ -1,3 +1,8 @@
+package plants;
+
+import interfaces.Waterable;
+import enums.Liquid;
+
 public abstract class Plant implements Waterable {
 
     protected double heightInMeters;
@@ -8,5 +13,9 @@ public abstract class Plant implements Waterable {
     Plant(String name, double heightInMeters) {
         this.name = name;
         this.heightInMeters = heightInMeters;
+    }
+
+    public String getName() {
+        return this.name;
     }
 }

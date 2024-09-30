@@ -1,3 +1,7 @@
+package hotels;
+
+import plants.Plant;
+
 import java.util.ArrayList;
 import java.util.List;
 
