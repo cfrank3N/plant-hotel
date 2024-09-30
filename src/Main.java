@@ -28,7 +28,7 @@ public class Main {
 
         //Whileloopa detta nedan
         while(true) {
-            String input = JOptionPane.showInputDialog("Which plant to you want to feed?");
+            String input = JOptionPane.showInputDialog("Which plant do you want to feed?");
             //Kollar om användaren har klickat på Cancel eller kryss för att avsluta programmet
             if (input == null) {
                 System.exit(0);
