@@ -11,6 +11,7 @@ public class Cactus extends Plant {
         this.baseAmountToDrink = 0.02;
     }
 
+    @Override
     public void printInstructions() {
         //JOptionPane här eller något
         JOptionPane.showMessageDialog(null, this.name + " is a Cactus, cacti always need "

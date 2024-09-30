@@ -11,6 +11,7 @@ public class Carnivorous extends Plant {
         this.baseAmountToDrink = 0.1;
     }
 
+    @Override
     public void printInstructions() {
         //JOptionPane här eller något
         JOptionPane.showMessageDialog(null, this.name +
