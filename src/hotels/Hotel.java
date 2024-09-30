@@ -10,7 +10,9 @@ public class Hotel {
     private List<Plant> plants = new ArrayList<>();
 
     public void addPlants(List<Plant> plants) {
-        this.plants = plants;
+        for (Plant p : plants) {
+            this.plants.add(p);
+        }
     }
 
     public List<Plant> getPlants() {
