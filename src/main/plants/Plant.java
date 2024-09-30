@@ -1,7 +1,7 @@
-package plants;
+package main.plants;
 
-import interfaces.Waterable;
-import enums.Liquid;
+import main.interfaces.Waterable;
+import main.plants.enums.Liquid;
 
 public abstract class Plant implements Waterable {
 

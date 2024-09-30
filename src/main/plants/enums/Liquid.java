@@ -1,4 +1,4 @@
-package enums;
+package main.plants.enums;
 
 public enum Liquid {
 

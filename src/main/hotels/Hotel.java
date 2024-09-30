@@ -1,6 +1,6 @@
-package hotels;
+package main.hotels;
 
-import plants.Plant;
+import main.plants.Plant;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,6 +1,6 @@
-package plants;
+package main.plants;
 
-import enums.Liquid;
+import main.plants.enums.Liquid;
 import javax.swing.*;
 
 public class PalmTree extends Plant {

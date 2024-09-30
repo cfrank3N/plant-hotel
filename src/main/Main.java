@@ -1,10 +1,10 @@
 package main;
 
-import hotels.Hotel;
-import plants.Cactus;
-import plants.Carnivorous;
-import plants.PalmTree;
-import plants.Plant;
+import main.hotels.Hotel;
+import main.plants.Cactus;
+import main.plants.Carnivorous;
+import main.plants.PalmTree;
+import main.plants.Plant;
 
 import javax.swing.*;
 import java.util.ArrayList;
