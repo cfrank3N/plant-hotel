@@ -17,7 +17,7 @@ public class Carnivorous extends Plant {
         JOptionPane.showMessageDialog(null, this.name +
                 " is a carnivorous plant and needs " +
                 (baseAmountToDrink + (baseAmountToDrink * 2 * heightInMeters)) +
-                " liters of " + liquid.liquidName + " per day.");
+                " liters of " + liquid.getLiquidName() + " per day.");
     }
 
 }
