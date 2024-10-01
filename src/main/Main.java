@@ -46,7 +46,7 @@ public class Main {
                 //Om den hittar växtens namn printar den ut en instruktion om hur man ska vattna den.
                 //Här används polymorphism då listan är av typen planta, men beroende på vilken växt det är
                 //skriver den ut en unik instruktion specifikt för den växten
-                if (input.equals(p.getName())) {
+                if (input.equalsIgnoreCase(p.getName())) {
                     p.printInstructions();
                     return;
                 }
