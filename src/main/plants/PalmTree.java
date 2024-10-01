@@ -14,7 +14,7 @@ public class PalmTree extends Plant {
     @Override
     public void printInstructions() {
         JOptionPane.showMessageDialog(null, this.name + " is a palm tree and needs " +
-                this.baseAmountToDrink * heightInMeters + " liter/s of " + liquid.liquidName + " per day.");
+                this.baseAmountToDrink * heightInMeters + " liter/s of " + liquid.getLiquidName() + " per day.");
     }
 
 }

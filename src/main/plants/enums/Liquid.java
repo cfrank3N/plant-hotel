@@ -6,9 +6,13 @@ public enum Liquid {
     MINERALWATER("mineral water"),
     PROTEINDRINK("protein drink");
 
-    public final String liquidName;
+    private final String liquidName;
 
-    private Liquid(String l) {
+    Liquid(String l) {
         this.liquidName = l;
+    }
+
+    public String getLiquidName() {
+        return liquidName;
     }
 }
