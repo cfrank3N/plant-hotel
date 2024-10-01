@@ -12,9 +12,14 @@ public class PalmTree extends Plant {
     }
 
     @Override
+    public double calculateAmountOfLiquid() {
+        return baseAmountToDrink * heightInMeters;
+    }
+
+    @Override
     public void printInstructions() {
         JOptionPane.showMessageDialog(null, this.name + " is a palm tree and needs " +
-                this.baseAmountToDrink * heightInMeters + " liter/s of " + liquid.getLiquidName() + " per day.");
+                this.calculateAmountOfLiquid() + " liter/s of " + liquid.getLiquidName() + " per day.");
     }
 
 }

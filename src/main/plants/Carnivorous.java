@@ -12,11 +12,16 @@ public class Carnivorous extends Plant {
     }
 
     @Override
+    public double calculateAmountOfLiquid() {
+        return baseAmountToDrink + (baseAmountToDrink * 2 * heightInMeters);
+    }
+
+    @Override
     public void printInstructions() {
         //JOptionPane här eller något
         JOptionPane.showMessageDialog(null, this.name +
                 " is a carnivorous plant and needs " +
-                (baseAmountToDrink + (baseAmountToDrink * 2 * heightInMeters)) +
+                this.calculateAmountOfLiquid() +
                 " liters of " + liquid.getLiquidName() + " per day.");
     }
 
