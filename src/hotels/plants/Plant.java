@@ -6,7 +6,8 @@ import hotels.plants.enums.BaseLiquidFor;
 //Implementerar Interface i superklassen. Alla subklasser gör då detta automatiskt.
 public abstract class Plant implements Waterable {
 
-    //inkapsling, endast subklasserna i detta paket kommer åt dessa variabler.
+    //Inkapsling, endast subklasserna i detta paket kommer åt dessa variabler.
+    //Har även använt mig av paket.
     protected double heightInMeters;
     protected String name;
     protected BaseLiquidFor liquid;

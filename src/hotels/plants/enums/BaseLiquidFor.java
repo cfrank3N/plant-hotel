@@ -6,6 +6,7 @@ public enum BaseLiquidFor {
     PALM_TREE(0.5, "tap water"),
     CARNIVOROUS(0.1, "protein drink");
 
+    //Inkapsling
     private final double baseAmountToDrink;
     private final String typeOfLiquid;
 
@@ -14,6 +15,7 @@ public enum BaseLiquidFor {
         this.typeOfLiquid = typeOfLiquid;
     }
 
+    //Inkapsling. Man kan bara komma åt enumens privata värden, men inte ändra dem.
     public double getBaseAmountToDrink() {
         return baseAmountToDrink;
     }
