@@ -1,25 +1,25 @@
-package main.plants;
+package hotels.plants;
 
-import main.plants.enums.Liquid;
+import hotels.plants.enums.BaseLiquidFor;
 import javax.swing.*;
 
+//Ärver Plant
 public class PalmTree extends Plant {
 
     public PalmTree(String name, double heightInMeters) {
         super(name, heightInMeters);
-        this.liquid = Liquid.TAPWATER;
-        this.baseAmountToDrink = 0.5;
+        this.liquid = BaseLiquidFor.PALM_TREE;
     }
 
     @Override
     public double calculateAmountOfLiquid() {
-        return baseAmountToDrink * heightInMeters;
+        return liquid.getBaseAmountToDrink() * heightInMeters;
     }
 
     @Override
     public void printInstructions() {
         JOptionPane.showMessageDialog(null, this.name + " is a palm tree and needs " +
-                this.calculateAmountOfLiquid() + " liter/s of " + liquid.getLiquidName() + " per day.");
+                this.calculateAmountOfLiquid() + " liter/s of " + liquid.getTypeOfLiquid() + " per day.");
     }
 
 }

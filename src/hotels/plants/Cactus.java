@@ -1,25 +1,25 @@
-package main.plants;
+package hotels.plants;
 
-import main.plants.enums.Liquid;
+import hotels.plants.enums.BaseLiquidFor;
 import javax.swing.*;
 
+//Ärver Plant
 public class Cactus extends Plant {
 
     public Cactus(String name, double heightInMeters) {
         super(name, heightInMeters);
-        this.liquid = Liquid.MINERALWATER;
-        this.baseAmountToDrink = 0.02;
+        this.liquid = BaseLiquidFor.CACTUS;
     }
 
     @Override
     public double calculateAmountOfLiquid() {
-        return baseAmountToDrink;
+        return liquid.getBaseAmountToDrink();
     }
 
     @Override
     public void printInstructions() {
         JOptionPane.showMessageDialog(null, this.name + " is a Cactus, cacti always need "
-                        + this.calculateAmountOfLiquid() + " liters of " + liquid.getLiquidName() + " per day, regardless of size.");
+                        + this.calculateAmountOfLiquid() + " liters of " + liquid.getTypeOfLiquid() + " per day, regardless of size.");
     }
 
 }
