@@ -35,6 +35,8 @@ public class Main {
     //Själva programmet
     public Main() {
         while(true) {
+
+            boolean valueFound = false;
             String input = JOptionPane.showInputDialog(waterPlant);
             //Kollar om användaren har klickat på Cancel eller kryss för att avsluta programmet
             if (input == null) {
@@ -47,11 +49,13 @@ public class Main {
                 //skriver den ut en unik instruktion specifikt för den växten
                 if (input.equalsIgnoreCase(p.getName())) {
                     p.printInstructions();
-                    return;
+                    valueFound = true;
                 }
             }
             //Om namnet ej existerar så skriver den ut ett felmeddelande:
-            JOptionPane.showMessageDialog(null, errorMessage);
+            if (!valueFound) {
+                JOptionPane.showMessageDialog(null, errorMessage);
+            }
         }
     }
 }
