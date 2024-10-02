@@ -1,5 +1,6 @@
 package main.plants;
 
+import main.plants.enums.BaseLiquid;
 import main.plants.enums.Liquid;
 import javax.swing.*;
 
@@ -9,13 +10,13 @@ public class Carnivorous extends Plant {
     public Carnivorous(String name, double heightInMeters) {
         super(name, heightInMeters);
         this.liquid = Liquid.PROTEINDRINK;
-        this.baseAmountToDrink = 0.1;
+        this.baseLiquid = BaseLiquid.CARNIVOROUS;
     }
 
     // Interfacets metoder nedan:
     @Override
     public double calculateAmountOfLiquid() {
-        return baseAmountToDrink + (baseAmountToDrink * 2 * heightInMeters);
+        return baseLiquid.getBaseAmountToDrink() + (baseLiquid.getBaseAmountToDrink() * 2 * heightInMeters);
     }
 
     @Override

@@ -1,5 +1,6 @@
 package main.plants;
 
+import main.plants.enums.BaseLiquid;
 import main.plants.enums.Liquid;
 import javax.swing.*;
 
@@ -8,12 +9,12 @@ public class PalmTree extends Plant {
     public PalmTree(String name, double heightInMeters) {
         super(name, heightInMeters);
         this.liquid = Liquid.TAPWATER;
-        this.baseAmountToDrink = 0.5;
+        this.baseLiquid = BaseLiquid.PALM_TREE;
     }
 
     @Override
     public double calculateAmountOfLiquid() {
-        return baseAmountToDrink * heightInMeters;
+        return baseLiquid.getBaseAmountToDrink() * heightInMeters;
     }
 
     @Override
