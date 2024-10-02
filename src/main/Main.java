@@ -8,6 +8,7 @@ import main.plants.Plant;
 
 import javax.swing.*;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Main {
@@ -15,28 +16,23 @@ public class Main {
         Main m = new Main();
     }
 
+    //Skapar olika typer av växter här samt en lista av växter.
+    //Polymorphism
+    private Plant igge = new Cactus("Igge", 0.2);
+    private Plant laura = new PalmTree("Laura", 5.0);
+    private Plant meatloaf = new Carnivorous("Meatloaf", 0.7);
+    private Plant olof = new PalmTree("Olof", 1);
+
+    //Lägger växterna i en lista av typen Plant. Polymorphism.
+    private List<Plant> plants = Arrays.asList(igge, laura, meatloaf, olof);
+
+    //Skapar upp ett hotell och fyller det med växterna från ovan lista.
+    private Hotel hotel = new Hotel(plants);
+
+    //Själva programmet
     public Main() {
-        //Skapar olika typer av växter här.
-        //Polymorphism
-        Plant igge = new Cactus("Igge", 0.2);
-        Plant laura = new PalmTree("Laura", 5.0);
-        Plant meatloaf = new Carnivorous("Meatloaf", 0.7);
-        Plant olof = new PalmTree("Olof", 1);
-
-        //Lägger växterna i en lista av typen Plant. Polymorphism.
-        List<Plant> plants = new ArrayList<>();
-        plants.add(igge);
-        plants.add(laura);
-        plants.add(meatloaf);
-        plants.add(olof);
-
-        //Skapar upp hotellet och lägger till listan växterna som gäster hos hotellet
-        Hotel hotel = new Hotel();
-        hotel.addPlants(plants);
-
-        //Whileloopa detta nedan
         while(true) {
-            String input = JOptionPane.showInputDialog("Which plant do you want to feed?");
+            String input = JOptionPane.showInputDialog("Which plant do you want to give water?");
             //Kollar om användaren har klickat på Cancel eller kryss för att avsluta programmet
             if (input == null) {
                 System.exit(0);
@@ -55,5 +51,4 @@ public class Main {
             JOptionPane.showMessageDialog(null, "Couldn't find that name in the Hotels guestlist of plants. Try again.");
         }
     }
-
 }

@@ -18,7 +18,6 @@ public class Cactus extends Plant {
 
     @Override
     public void printInstructions() {
-        //JOptionPane här eller något
         JOptionPane.showMessageDialog(null, this.name + " is a Cactus, cacti always need "
                         + this.calculateAmountOfLiquid() + " liters of " + liquid.getLiquidName() + " per day, regardless of size.");
     }
