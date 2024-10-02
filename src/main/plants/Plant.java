@@ -4,6 +4,7 @@ import main.interfaces.Waterable;
 import main.plants.enums.BaseLiquid;
 import main.plants.enums.Liquid;
 
+//Implementerar Interface i superklassen. Alla subklasser gör då detta automatiskt.
 public abstract class Plant implements Waterable {
 
     protected double heightInMeters;

@@ -4,6 +4,7 @@ import main.plants.enums.BaseLiquid;
 import main.plants.enums.Liquid;
 import javax.swing.*;
 
+//Ärver Plant
 public class PalmTree extends Plant {
 
     public PalmTree(String name, double heightInMeters) {
