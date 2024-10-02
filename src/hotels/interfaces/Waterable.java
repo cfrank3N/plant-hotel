@@ -1,4 +1,4 @@
-package main.interfaces;
+package hotels.interfaces;
 
 public interface Waterable {
 

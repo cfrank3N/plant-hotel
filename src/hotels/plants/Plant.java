@@ -1,16 +1,14 @@
-package main.plants;
+package hotels.plants;
 
-import main.interfaces.Waterable;
-import main.plants.enums.BaseLiquid;
-import main.plants.enums.Liquid;
+import hotels.interfaces.Waterable;
+import hotels.plants.enums.BaseLiquidFor;
 
 //Implementerar Interface i superklassen. Alla subklasser gör då detta automatiskt.
 public abstract class Plant implements Waterable {
 
     protected double heightInMeters;
     protected String name;
-    protected Liquid liquid;
-    protected BaseLiquid baseLiquid;
+    protected BaseLiquidFor liquid;
 
     Plant(String name, double heightInMeters) {
         this.name = name;

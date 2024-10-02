@@ -1,7 +1,6 @@
-package main.plants;
+package hotels.plants;
 
-import main.plants.enums.BaseLiquid;
-import main.plants.enums.Liquid;
+import hotels.plants.enums.BaseLiquidFor;
 import javax.swing.*;
 
 //Ärver Plant
@@ -10,14 +9,13 @@ public class Carnivorous extends Plant {
     //Constructor använder sig av superklassens protectade instansvariabler.
     public Carnivorous(String name, double heightInMeters) {
         super(name, heightInMeters);
-        this.liquid = Liquid.PROTEINDRINK;
-        this.baseLiquid = BaseLiquid.CARNIVOROUS;
+        this.liquid = BaseLiquidFor.CARNIVOROUS;
     }
 
     // Interfacets metoder nedan:
     @Override
     public double calculateAmountOfLiquid() {
-        return baseLiquid.getBaseAmountToDrink() + (baseLiquid.getBaseAmountToDrink() * 2 * heightInMeters);
+        return liquid.getBaseAmountToDrink() + (liquid.getBaseAmountToDrink() * 2 * heightInMeters);
     }
 
     @Override
@@ -25,7 +23,7 @@ public class Carnivorous extends Plant {
         JOptionPane.showMessageDialog(null, this.name +
                 " is a carnivorous plant and needs " +
                 this.calculateAmountOfLiquid() +
-                " liters of " + liquid.getLiquidName() + " per day.");
+                " liters of " + liquid.getTypeOfLiquid() + " per day.");
     }
 
 }
