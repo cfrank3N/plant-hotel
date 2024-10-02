@@ -28,10 +28,14 @@ public class Main {
     //Skapar upp ett hotell och fyller det med växterna från ovan lista.
     private Hotel hotel = new Hotel(plants);
 
+    //Strängar med meddelanden till användaren
+    private String errorMessage = "Couldn't find that name in the Hotels guestlist of plants. Try again.";
+    private String waterPlant = "Which plant do you want to give water?";
+
     //Själva programmet
     public Main() {
         while(true) {
-            String input = JOptionPane.showInputDialog("Which plant do you want to give water?");
+            String input = JOptionPane.showInputDialog(waterPlant);
             //Kollar om användaren har klickat på Cancel eller kryss för att avsluta programmet
             if (input == null) {
                 System.exit(0);
@@ -47,7 +51,7 @@ public class Main {
                 }
             }
             //Om namnet ej existerar så skriver den ut ett felmeddelande:
-            JOptionPane.showMessageDialog(null, "Couldn't find that name in the Hotels guestlist of plants. Try again.");
+            JOptionPane.showMessageDialog(null, errorMessage);
         }
     }
 }
